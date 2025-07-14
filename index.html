@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fasgo</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <nav>
@@ -18,13 +20,94 @@
                 </ul>
             </div>
             <div class="buttons">
-                <select>
-                    <option>UZB</option>
-                    <option>RUS</option>
-                    <option>ENG</option>
-                </select>
+                <div class="language-selector">
+                    <button id="lang-btn">UZB ▼</button>
+                    <ul id="lang-options" class="hidden">
+                        <li data-href="index.html">UZB</li>
+                        <li data-href="index-ru.html">RUS</li>
+                        <li data-href="index-en.html">ENG</li>
+                    </ul>
+                </div>
+
+                <button class="nav-btn">Yuklab olish</button>
             </div>
-            </nav>
+        </nav>
+        <div class="hero">
+            <img class="ornament-top" src="./Images/ornament (1).png">
+            <img class="ornament-bottom" src="./Images/ornament.png">
+            <div class="hero-content">
+                <h1>Sevimli restoranlardan <br> taomlarni <div class="rectangle">
+                        <img src="./Images/Rectangle/Rectangle 1.png" alt="">
+                        <img src="./Images/Rectangle/Rectangle 2.png" alt="">
+                        <img src="./Images/Rectangle/Rectangle 3.png" alt="">
+                    </div>
+                    <font> <span>tez</span> yetkazib berish </font>
+                </h1>
+                <h4>Milliy taomlar, fast-food, desert va ichimliklar bir ilovada!</h4>
+                <button>Ilovani yuklab olish</button>
+            </div>
+            <img class="cover-app" src="./Images/meals/cover-app.png" alt="">
+            <img class="hero-meals1" src="./Images/meals/img.png" alt="">
+            <img class="hero-meals2" src="./Images/meals/img (1).png" alt="">
+            <img class="hero-meals3" src="./Images/meals/img (2).png" alt="">
+            <img class="hero-meals4" src="./Images/meals/img (3).png" alt="">
+        </div>
+        <div class="partners">
+            <img src="./Images/Partners/partners-kamolon.png" alt="">
+            <img src="./Images/Partners/partners-dodo.png" alt="">
+            <img src="./Images/Partners/partners-maxway.png" alt="">
+            <img src="./Images/Partners/partners-evos.png" alt="">
+            <img src="./Images/Partners/partners-fedup.png" alt="">
+            <img src="./Images/Partners/partners-oqtepa.png" alt="">
+            <img src="./Images/Partners/partners-sariq.png" alt="">
+        </div>
+        <div class="info">
+            <div class="info-text">
+                <h1>Keng tanlov imkoniyati</h1>
+                <h6><font>Fasgo</font>’da ta’bingizga mos ming xil taom bor! Milliy palovdan tortib, italyan pizzasi, yapon sushisi
+                    yoki amerika burgerigacha — hammasi <font>bir joyda</font>. Bugun lag'mon, ertaga sushi? Tanlov sizdan! Har kun
+                    yangi ta’m, har buyurtma – mazali sarguzasht!</h6>
+            </div>
+            <div class="info-meals">
+                <img src="./Images/meals/info-meals.png" alt="">
+                <img src="./Images/meals/info-meals (2).png" alt="">
+                <img src="./Images/meals/info-meals (3).png" alt="">
+                <img src="./Images/meals/info-meals (4).png" alt="">
+                <img src="./Images/meals/info-meals (5).png" alt="">
+            </div>
+        </div>
+        <div class="about">
+            <div class="about-content">
+                <h1>Ilovani yuklab oling va <br> tanovvulni boshlang</h1>
+            </div>
+            <img class="about-phone" src="./Images/meals/About-phone.png" alt="">
+            <img class="about-card" src="./Images/meals/About-card.png" alt="">
+            <img class="about-item" src="./Images/meals/About-item.png" alt="">
+        </div>
     </div>
+
+    <script>
+        const langBtn = document.getElementById("lang-btn");
+        const langOptions = document.getElementById("lang-options");
+
+        langBtn.addEventListener("click", () => {
+            if (langOptions.classList.contains("hidden")) {
+                langOptions.classList.remove("hidden");
+                langOptions.style.display = "block"; // <- bu yerda ko‘rsatib qo‘yasiz
+            } else {
+                langOptions.classList.add("hidden");
+                langOptions.style.display = "none"; // <- yana yashirasiz
+            }
+        });
+
+        langOptions.addEventListener("click", (e) => {
+            if (e.target.tagName === "LI") {
+                const href = e.target.getAttribute("data-href");
+                window.location.href = href;
+            }
+        });
+    </script>
+
 </body>
+
 </html>
