@@ -46,7 +46,6 @@
 nav {
   width: 100%;
   height: 100px;
-  padding-top: 10px;
   padding: 10px 30px;
   display: flex;
   align-items: center;
@@ -67,6 +66,10 @@ nav ul a {
   color: #0CC0DF;
   font-weight: 600;
   /* margin-left: 35px; */
+}
+
+.burger-icon {
+  display: none;
 }
 
 .pages {
@@ -684,7 +687,7 @@ nav ul a {
   border-bottom-right-radius: 80px;
   border-bottom-left-radius: 40px;
   margin-top: 30px;
-  background: linear-gradient(to right, #00F97D,#00ACCA);
+  background: linear-gradient(to right, #00F97D, #00ACCA);
   position: relative;
   float: left;
 }
@@ -703,7 +706,7 @@ nav ul a {
   border-top-right-radius: 40px;
   border-bottom-right-radius: 80px;
   border-bottom-left-radius: 40px;
-  background: linear-gradient(to right, #00F97D,#00ACCA);
+  background: linear-gradient(to right, #00F97D, #00ACCA);
   position: relative;
   margin-left: 18px;
   margin-top: 30px;
@@ -732,7 +735,7 @@ nav ul a {
   font-size: 40px;
   color: white;
   margin-top: 50px;
-  margin-left:50px;
+  margin-left: 50px;
 }
 
 .forms-content h5 {
@@ -769,7 +772,7 @@ nav ul a {
   font-size: 40px;
   color: white;
   margin-top: 50px;
-  margin-left:50px;
+  margin-left: 50px;
 }
 
 .forms-courier h5 {
@@ -819,6 +822,7 @@ nav ul a {
   display: flex;
   background-color: white;
 }
+
 .socials-instagram {
   width: 313px;
   height: 100px;
@@ -832,6 +836,7 @@ nav ul a {
   display: flex;
   background-color: white;
 }
+
 .socials-facebook {
   width: 313px;
   height: 100px;
@@ -857,6 +862,7 @@ nav ul a {
   font-size: 18px;
   color: #706A75;
 }
+
 .socials-instagram h3 {
   font-family: M-medium;
   font-size: 22px;
@@ -868,6 +874,7 @@ nav ul a {
   font-size: 18px;
   color: #706A75;
 }
+
 .socials-facebook h3 {
   font-family: M-medium;
   font-size: 22px;
@@ -895,7 +902,7 @@ footer {
   margin-left: 30px;
   text-align: center;
   border: 1px solid transparent;
-  background: linear-gradient(135deg, #D4FCE4,#EEFEF5,#FFFFFF,#E9FCFF,#C5F7FF);
+  background: linear-gradient(135deg, #D4FCE4, #EEFEF5, #FFFFFF, #E9FCFF, #C5F7FF);
 }
 
 .footer-content {
@@ -909,7 +916,7 @@ footer {
   font-family: M-Sbold;
   font-size: 30px;
   color: #A471D8;
-  
+
 }
 
 .footer-content h4 {
@@ -929,4 +936,229 @@ footer {
   font-size: 20px;
   color: #A471D8;
   margin-right: 20px;
+}
+
+/* Footer end */
+
+/* Responsive */
+
+@media (max-width: 393px) {
+  .container {
+    width: 393px;
+    height: 4300px;
+  }
+
+  nav {
+    width: 100%;
+    height: 60px;
+    padding: 10px 20px;
+  }
+
+  .buttons {
+    width: 108px;
+    height: 40px;
+    margin-left: 150px;
+  }
+
+  nav img {
+    width: 88px;
+    height: 35px;
+  }
+
+  nav .pages,
+  .nav-btn {
+    display: none;
+  }
+
+  nav .burger-icon {
+    display: block;
+  }
+
+  #lang-btn {
+    color: #000;
+    width: 60px;
+    height: 40px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+  }
+
+  .hero {
+    width: 373px;
+    height: 683px;
+    margin-left: 10px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 15px;
+    text-align: center;
+  }
+
+  .hero-content {
+    width: 343px;
+    height: 182px;
+    margin-left: 15px;
+    margin-top: 30px;
+    gap: 16px;
+    position: relative;
+  }
+
+  .hero-content h1 {
+    font-size: 24px;
+    text-align: center;
+    line-height: 24px;
+
+  }
+
+  .hero-content h1 span {
+    font-size: 24px;
+  }
+
+  .hero-content h4 {
+    font-size: 14px;
+    font-family: M-medium;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .rectangle {
+    position: absolute;
+    left: -55px;
+    top: 70px;
+  }
+
+  .cover-app {
+    width: 329.15px;
+    height: 350px;
+    position: absolute;
+    top: 283px;
+    left: 15px;
+  }
+
+  .hero-meals1 {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 240px;
+    left: 260px;
+  }
+
+  .hero-meals2 {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 347px;
+    left: 145px;
+  }
+
+  .hero-meals3 {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 562px;
+    left: 254px;
+  }
+
+  .hero-meals4 {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 494px;
+    left: 25px;
+  }
+
+  .partners {
+    width: 373px;
+    height: 60px;
+    margin-left: 10px;
+    margin: 100px auto;
+    gap: 10px;
+    padding-left: 0px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  .komolon {
+    display: none;
+  }
+  .partners img {
+    margin-right: 20px;
+  }
+  .info {
+    width: 373px;
+    height: 382px;
+    gap: 30px;
+  }
+  .info-text {
+    width: 373px;
+    height: 112px;
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 8px;
+
+  }
+  .info-text h1 {
+    font-size: 24px;
+  }
+  .info-text h6 {
+    font-size: 12px;
+    text-align: center;
+  }
+  .info-meals {
+    width: 373px;
+    height: 240px;
+    margin-left: 10px;
+    padding-left: 5px;
+    gap: 0px;
+    padding-right: 5px;
+    display: flex;
+    justify-content: row;
+    flex-wrap: wrap;
+  }
+  .info-meals img {
+    width: 120px;
+    height: 120px;
+  }
+  .about {
+    width: 373px;
+    height: 1078px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 15px;
+  }
+  .about-content {
+    width: 333px;
+    height: 340px;
+    margin-top: 30px;
+    margin-left: 20px;
+    gap: 20px;
+  }
+  .about-content h1 {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+  .about-content p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .about-content button {
+    width: 333px;
+    height: 78px;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 32px;
+    border-bottom-left-radius: 16px;
+  }
+  .about-phone {
+    width: 353px;
+    height: 648px;
+    position: absolute;
+    top: 405px;
+    left: 10px;
+  }
 }
