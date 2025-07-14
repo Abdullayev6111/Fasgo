@@ -39,7 +39,6 @@
   height: 4182px;
   margin: 0 auto;
   background-color: #E9F4F9;
-  border: 1px solid black;
 }
 
 /* Navbar start */
@@ -894,5 +893,40 @@ footer {
   border-bottom-left-radius: 40px;
   margin-top: 160px;
   margin-left: 30px;
+  text-align: center;
+  border: 1px solid transparent;
   background: linear-gradient(135deg, #D4FCE4,#EEFEF5,#FFFFFF,#E9FCFF,#C5F7FF);
+}
+
+.footer-content {
+  width: 692px;
+  height: 293px;
+  gap: 40px;
+  margin: 70px auto;
+}
+
+.footer-content h1 {
+  font-family: M-Sbold;
+  font-size: 30px;
+  color: #A471D8;
+  
+}
+
+.footer-content h4 {
+  font-family: M-medium;
+  font-size: 22px;
+  color: #A471D8;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.footer-content img {
+  margin-bottom: 20px;
+}
+
+.footer-content a {
+  font-family: M-regular;
+  font-size: 20px;
+  color: #A471D8;
+  margin-right: 20px;
 }

@@ -80,7 +80,8 @@
                 <img src="./Images/meals/info-meals (5).png" alt="">
             </div>
         </div>
-        <div class="about">
+        <div data-aos="fade-up"
+     data-aos-duration="3000" class="about">
             <div class="about-content">
                 <h1>Ilovani yuklab oling va <br> tanovvulni boshlang <img src="./Images/Star 1.png" alt=""></h1>
                 <p>Fasgo – bu tez, ishonchli va qulay ovqat yetkazib berish xizmati. Sevimli taomlaringizni mobil ilova
@@ -135,7 +136,8 @@
                 </div>
             </div>
         </div>
-        <div class="forms">
+        <div data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom" class="forms">
             <h1>Biz bilan ishlash</h1>
             <div class="forms-content">
                 <img class="forms-ornament" src="./Images/ornament (1).png" alt="">
@@ -157,23 +159,41 @@
             <div class="socials-items">
                 <div class="socials-telegram">
                     <img src="./Images/Social-media/telegram.png" alt="">
-                    <h3>Telegram <br> <font>fasgo.app</font></h3>
+                    <h3>Telegram <br>
+                        <font>fasgo.app</font>
+                    </h3>
                 </div>
                 <div class="socials-instagram">
                     <img src="./Images/Social-media/instagram.png" alt="">
-                    <h3>Instagram <br> <font>fasgo.official</font></h3>
+                    <h3>Instagram <br>
+                        <font>fasgo.official</font>
+                    </h3>
                 </div>
                 <div class="socials-facebook">
                     <img src="./Images/Social-media/facebook.png" alt="">
-                    <h3>Facebook <br> <font>fasgo.app</font></h3>
+                    <h3>Facebook <br>
+                        <font>fasgo.app</font>
+                    </h3>
                 </div>
             </div>
         </div>
         <footer>
-            <img src="./Images/logo-blue.png" alt="">
+            <div class="footer-content">
+                <img src="./Images/logo-blue.png" alt="">
+                <h1>Tel: +997 123 456 789</h1>
+                <h1>Email: info@fasgo.app</h1>
+                <h4>Manzil: O’zbekiston, Toshkent shahar, Chilonzor tumani Obod mavzesi, Istiqlol ko’chasi, 23A uy.</h4>
+                <a href="#">Ommaviy oferta</a>
+                <a href="#">Maxfiylik siyosati</a>
+            </div>
         </footer>
     </div>
 
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script>
         const langBtn = document.getElementById("lang-btn");
         const langOptions = document.getElementById("lang-options");
@@ -195,7 +215,6 @@
             }
         });
     </script>
-
 </body>
 
 </html>
