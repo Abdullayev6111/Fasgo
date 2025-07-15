@@ -73,8 +73,8 @@ nav ul a {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;         
-  height: 100vh;       
+  width: 100%;
+  height: 100vh;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -82,7 +82,7 @@ nav ul a {
   padding: 2rem;
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
-  z-index: 999;   
+  z-index: 999;
 }
 
 
@@ -527,7 +527,7 @@ nav ul a {
   border-bottom: 0.5px solid gray;
   margin-bottom: 40px;
   gap: 20px;
-  /* display: flex; */
+  display: flex;
 }
 
 .first-item h1 {
@@ -1247,26 +1247,27 @@ footer {
   .first-item img {
     width: 60px;
     height: 60px;
-    float: left;
   }
 
   .first-item {
     width: 333px;
     height: 116px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: column;
   }
 
   .first-item h1 {
     font-size: 12px;
     line-height: 24px;
     text-align: center;
-    float: left;
   }
 
   .first-item p {
     font-size: 10px;
     line-height: 16px;
     text-align: center;
-    float: left;
   }
 
   .forms {
@@ -1478,7 +1479,7 @@ footer {
   }
 
   .close-page.show {
-     transform: translateX(0%);
+    transform: translateX(0%);
   }
 
   .close-menu {
