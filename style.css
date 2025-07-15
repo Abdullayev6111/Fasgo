@@ -68,7 +68,30 @@ nav ul a {
   /* margin-left: 35px; */
 }
 
-.burger-icon {
+.close-page {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;         
+  height: 100vh;       
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 999;   
+}
+
+
+.menu-toggle {
+  width: 32px;
+  height: 32px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
   display: none;
 }
 
@@ -945,7 +968,6 @@ footer {
 @media (max-width: 393px) {
   .container {
     width: 393px;
-    height: 4300px;
   }
 
   nav {
@@ -970,8 +992,9 @@ footer {
     display: none;
   }
 
-  nav .burger-icon {
+  nav .menu-toggle {
     display: block;
+
   }
 
   #lang-btn {
@@ -1081,17 +1104,21 @@ footer {
     justify-content: space-between;
     overflow: hidden;
   }
+
   .komolon {
     display: none;
   }
+
   .partners img {
     margin-right: 20px;
   }
+
   .info {
     width: 373px;
     height: 382px;
     gap: 30px;
   }
+
   .info-text {
     width: 373px;
     height: 112px;
@@ -1100,13 +1127,16 @@ footer {
     gap: 8px;
 
   }
+
   .info-text h1 {
     font-size: 24px;
   }
+
   .info-text h6 {
     font-size: 12px;
     text-align: center;
   }
+
   .info-meals {
     width: 373px;
     height: 240px;
@@ -1118,10 +1148,12 @@ footer {
     justify-content: row;
     flex-wrap: wrap;
   }
+
   .info-meals img {
     width: 120px;
     height: 120px;
   }
+
   .about {
     width: 373px;
     height: 1078px;
@@ -1130,6 +1162,7 @@ footer {
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 15px;
   }
+
   .about-content {
     width: 333px;
     height: 340px;
@@ -1137,15 +1170,18 @@ footer {
     margin-left: 20px;
     gap: 20px;
   }
+
   .about-content h1 {
     font-size: 24px;
     line-height: 30px;
     margin-bottom: 10px;
   }
+
   .about-content p {
     font-size: 12px;
     line-height: 18px;
   }
+
   .about-content button {
     width: 333px;
     height: 78px;
@@ -1154,11 +1190,305 @@ footer {
     border-bottom-right-radius: 32px;
     border-bottom-left-radius: 16px;
   }
+
   .about-phone {
     width: 353px;
     height: 648px;
     position: absolute;
     top: 405px;
     left: 10px;
+  }
+
+  .about-card {
+    width: 353px;
+    height: 100px;
+    border-top-left-radius: 36px;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 36px;
+    border-bottom-left-radius: 18px;
+    position: absolute;
+    top: 560px;
+    left: 10px;
+  }
+
+  .about-item {
+    width: 170.5px;
+    height: 224px;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 12px;
+    padding: 12px;
+    position: absolute;
+    top: 748px;
+    left: 16px;
+  }
+
+  .faq {
+    width: 373px;
+    height: 681px;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .faq h1 {
+    font-size: 24px;
+  }
+
+  .faq-items {
+    width: 333px;
+    height: 644px;
+    gap: 8px;
+
+  }
+
+  .first-item img {
+    width: 60px;
+    height: 60px;
+    float: left;
+  }
+
+  .first-item {
+    width: 333px;
+    height: 116px;
+  }
+
+  .first-item h1 {
+    font-size: 12px;
+    line-height: 24px;
+    text-align: center;
+    float: left;
+  }
+
+  .first-item p {
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+    float: left;
+  }
+
+  .forms {
+    width: 373px;
+    height: 447px;
+    gap: 20px;
+  }
+
+  .forms h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .forms-content {
+    width: 373px;
+    height: 200px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: column;
+    flex-wrap: wrap;
+  }
+
+  .forms-content h2 {
+    font-size: 24px;
+    line-height: 24px;
+    margin-top: 50px;
+  }
+
+  .forms-content h5 {
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: -5px;
+  }
+
+  .forms .img-restaurant {
+    width: 110px;
+    height: 100px;
+    position: absolute;
+    top: 90px;
+    left: 246px;
+  }
+
+  .forms .img-courier {
+    width: 90px;
+    height: 110px;
+    position: absolute;
+    top: 81px;
+    left: 262px;
+  }
+
+  .form-btn {
+    width: 180px;
+    height: 50px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 30px;
+    margin-top: 0px;
+  }
+
+  .forms-courier {
+    width: 373px;
+    height: 200px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 20px;
+    margin-left: 0px;
+    position: relative;
+    display: flex;
+    justify-content: column;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  .forms-courier h2 {
+    font-size: 24px;
+    line-height: 24px;
+    margin-top: 50px;
+  }
+
+  .forms-courier h5 {
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: -5px;
+  }
+
+  .socials {
+    width: 373px;
+    height: 297px;
+    gap: 20px;
+    font-size: 24px;
+  }
+
+  .socials-items {
+    width: 373px;
+    height: 260px;
+    gap: 10px;
+    display: flex;
+    justify-content: column;
+    flex-wrap: wrap;
+  }
+
+  .socials h1 {
+    font-size: 24px;
+    margin-top: 30px;
+  }
+
+  .socials-telegram {
+    width: 373px;
+    height: 80px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 10px;
+  }
+
+  .socials-instagram {
+    width: 373px;
+    height: 80px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 10px;
+  }
+
+  .socials-facebook {
+    width: 373px;
+    height: 80px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 10px;
+  }
+
+  footer {
+    width: 373px;
+    height: 237px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    gap: 16px;
+    margin-top: 350px;
+    margin-bottom: 50px;
+  }
+
+  .footer-content {
+    width: 333px;
+    height: 177px;
+    margin: 0 auto;
+    gap: 24px;
+  }
+
+  .footer-content img {
+    width: 89px;
+    height: 35px;
+  }
+
+  .footer-content h1 {
+    font-family: M-Sbold;
+    font-weight: 600;
+    font-size: 20px;
+
+  }
+
+  .footer-content h4 {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  .footer-content a {
+    font-size: 12px;
+
+  }
+
+  .close-page {
+    display: block;
+  }
+
+  .close-page ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .close-page ul li {
+    margin: 1rem 0;
+  }
+
+  .close-page ul li a {
+    color: #00c2e8;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .close-page.show {
+     transform: translateX(0%);
+  }
+
+  .close-menu {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #00c2e8;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
   }
 }

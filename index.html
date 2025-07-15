@@ -12,12 +12,20 @@
     <div class="container">
         <nav>
             <img src="Images/logo-blue.png" alt="">
-            
+
             <div class="pages">
                 <ul>
                     <li><a href="#">Biz haqimizda</a></li>
                     <li><a href="#">Ko'p soraladigan savollar</a></li>
                     <li><a href="#">Biz bolan ishlash</a></li>
+                </ul>
+            </div>
+            <div class="close-page">
+                <button class="close-menu" id="close-menu">&times;</button>
+                <ul>
+                    <li><a href="#">Biz haqimizda</a></li>
+                    <li><a href="#">Ko’p so’raladigan savollar</a></li>
+                    <li><a href="#">Biz bilan ishlash</a></li>
                 </ul>
             </div>
             <div class="buttons">
@@ -29,7 +37,7 @@
                         <li data-href="index-en.html">ENG</li>
                     </ul>
                 </div>
-                <img class="burger-icon" src="./Images/menu.png" alt="">
+                <button><img class="menu-toggle" src="./Images/menu.png" alt=""></button>
                 <button class="nav-btn">Yuklab olish</button>
             </div>
         </nav>
@@ -81,8 +89,7 @@
                 <img src="./Images/meals/info-meals (5).png" alt="">
             </div>
         </div>
-        <div data-aos="fade-up"
-     data-aos-duration="3000" class="about">
+        <div data-aos="fade-up" data-aos-duration="3000" class="about">
             <div class="about-content">
                 <h1>Ilovani yuklab oling va <br> tanovvulni boshlang <img src="./Images/Star 1.png" alt=""></h1>
                 <p>Fasgo – bu tez, ishonchli va qulay ovqat yetkazib berish xizmati. Sevimli taomlaringizni mobil ilova
@@ -114,27 +121,30 @@
                 <div class="second-item">
                     <img src="./Images/FAQ numbers/number (1).png" alt="">
                     <h1>Yetkazib berish qancha vaqt oladi?</h1> <br>
-                    <p>Buyurtma joylashgan joyga va restoran bandligiga qarab, o‘rtacha 30-45 daqiqa ichida yetkaziladi.</p>
+                    <p>Buyurtma joylashgan joyga va restoran bandligiga qarab, o‘rtacha 30-45 daqiqa ichida yetkaziladi.
+                    </p>
                 </div>
                 <div class="third-item">
                     <img src="./Images/FAQ numbers/number (2).png" alt="">
                     <h1>To‘lovni qanday amalga oshiraman?</h1> <br>
-                    <p>Siz to‘lovni istalgan bank karta bilan yoki naqd pulda, yetkazib beruvchi orqali amalga oshirishingiz mumkin.</p>
+                    <p>Siz to‘lovni istalgan bank karta bilan yoki naqd pulda, yetkazib beruvchi orqali amalga
+                        oshirishingiz mumkin.</p>
                 </div>
                 <div class="fourth-item">
                     <img src="./Images/FAQ numbers/number (3).png" alt="">
                     <h1>Taom yetib kelmasa yoki muammo bo‘lsa nima qilaman?</h1> <br>
-                    <p>Mijozlar xizmatiga murojaat qiling – biz muammoni tezda hal qilamiz yoki pulingizni qaytaramiz.</p>
+                    <p>Mijozlar xizmatiga murojaat qiling – biz muammoni tezda hal qilamiz yoki pulingizni qaytaramiz.
+                    </p>
                 </div>
                 <div class="fifth-item">
                     <img src="./Images/FAQ numbers/number (4).png" alt="">
                     <h1>Qanday taomlar mavjud?</h1> <br>
-                    <p>Fasgo’da milliy, fastfud, vegetarian, osiyo, yevropa oshxonalaridan minglab taomlar bor – har kun yangi tanlov!</p>
+                    <p>Fasgo’da milliy, fastfud, vegetarian, osiyo, yevropa oshxonalaridan minglab taomlar bor – har kun
+                        yangi tanlov!</p>
                 </div>
             </div>
         </div>
-        <div data-aos="fade-up"
-     data-aos-anchor-placement="top-bottom" class="forms">
+        <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="forms">
             <h1>Biz bilan ishlash</h1>
             <div class="forms-content">
                 <img class="forms-ornament" src="./Images/ornament (1).png" alt="">
@@ -186,32 +196,11 @@
         </footer>
     </div>
 
-    
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
-    <script>
-        const langBtn = document.getElementById("lang-btn");
-        const langOptions = document.getElementById("lang-options");
-
-        langBtn.addEventListener("click", () => {
-            if (langOptions.classList.contains("hidden")) {
-                langOptions.classList.remove("hidden");
-                langOptions.style.display = "block"; // <- bu yerda ko‘rsatib qo‘yasiz
-            } else {
-                langOptions.classList.add("hidden");
-                langOptions.style.display = "none"; // <- yana yashirasiz
-            }
-        });
-
-        langOptions.addEventListener("click", (e) => {
-            if (e.target.tagName === "LI") {
-                const href = e.target.getAttribute("data-href");
-                window.location.href = href;
-            }
-        });
-    </script>
+    <script src="./index.js"></script>
 </body>
 
 </html>
